@@ -2,11 +2,11 @@ def test_data
   @gard1 = Garden.create!(name: "Park Garden", organic: true)
   @gard2 = Garden.create!(name: "Other Garden", organic: false)
 
-  @plot1 = @gard1.plot.create!(number: 1, size: "Little", direction: "East")
-  @plot2 = @gard1.plot.create!(number: 2, size: "Big", direction: "West")
+  @plot1 = @gard1.plots.create!(number: 1, size: "Little", direction: "East")
+  @plot2 = @gard1.plots.create!(number: 2, size: "Big", direction: "West")
 
-  @plot3 = @gard2.plot.create!(number: 3, size: "Gigantic", direction: "East")
-  @plot4 = @gard2.plot.create!(number: 4, size: "Tiny", direction: "East")
+  @plot3 = @gard2.plots.create!(number: 3, size: "Gigantic", direction: "East")
+  @plot4 = @gard2.plots.create!(number: 4, size: "Tiny", direction: "East")
 
   @tomato = Plant.create!(name: "Tomato", description: "Grows like a weed", days_to_harvest: 90)
   @radish = Plant.create!(name: "Rasish", description: "Plain Radish", days_to_harvest: 120)
